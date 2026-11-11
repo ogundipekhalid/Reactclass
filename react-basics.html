@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Basics</title>
+</head>
+
+<body>
+    <div class="js-container"></div>
+
+    <!-- <script src="react-basics.js"></script> -->
+    <script src="https://unpkg.com/supersimpledev@3.2.1/external-libary.js">
+    </script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        // const button = <button>hello</button>;
+        // const paragraph = <p> paragraph of text </p>;
+
+
+        // const div = (
+        //     <div>
+        //         <button>GOOD Job</button>
+        //         <p> My name is simoon  </p>
+        //     </div>
+        // );
+        const ProductCard =(
+            <div>
+                <p>cutton Socks</p>
+                <p>Price : $10</p>
+                <button>Add to Cart</button>
+            </div>
+        )
+
+        const principal = 1000;
+        const rate = 5;
+        const time = 2;
+        const simpleInterest = (principal * rate * time) / 100;
+        const totalAmount = principal + simpleInterest;
+
+        const simpleInterestSummary = (
+            <div>
+                <h1>Simple Interest Calculator</h1>
+                <p>Principal: {principal}</p>
+                <p>Rate: {rate}%</p>
+                <p>Time: {time} years</p>
+                <p>Simple Interest: {simpleInterest}</p>
+                <p>Total Amount: {totalAmount}</p>
+            </div>
+        );
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(simpleInterestSummary);
+
+        const containers = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(ProductCard);
+
+        ReactDOM.createRoot(document.getElementById('js-container')).render(ProductCard);
+    </script>
+</body>
+
+</html>

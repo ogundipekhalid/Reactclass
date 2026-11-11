@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat Both</title>
+</head>
+
+<body>
+    <div class="js-container"></div>
+
+    <!-- <script src="react-basics.js"></script> -->
+    <script src="https://unpkg.com/supersimpledev@3.2.1/external-libary.js">
+    </script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        // const button = <button>hello</button>;
+        // const paragraph = <p> paragraph of text </p>;
+        function ChatInput() {
+            return (
+                <div>
+                    <input type="text" placeholder="Type your message..." size="50" />
+                    <button>Send</button>
+                </div>
+            );
+        }
+
+        const div = (
+            <div>
+                <h1>Chat Application</h1>
+                <ChatInput />
+            </div>
+        );
+
+        // const div = (
+        //     <div>
+        //         <button>GOOD Job</button>
+        //         <p> My name is simoon  </p>
+        //     </div>
+        // );
+        
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(div);
+    </script>
+</body>
+
+</html>
